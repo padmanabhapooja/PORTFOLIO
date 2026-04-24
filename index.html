@@ -124,7 +124,18 @@
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
   }
-  .hero-content { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; width: 100%; }
+  .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
   .hero-eyebrow {
     font-family: 'DM Mono', monospace;
@@ -785,9 +796,7 @@
 
 /* FIX HERO SECTION FOR MOBILE */
 .hero-content {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
@@ -803,9 +812,8 @@
 }
 
 .hero-image img {
-  width: 65%;
-  max-width: 200px;
-  min-width: 180px;
+  width: 320px;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
@@ -882,18 +890,26 @@
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid-lines"></div>
-  <div class="hero-content">
+<div class="hero-content">
+
+  <!-- LEFT SIDE TEXT -->
+  <div class="hero-text">
     <div class="hero-eyebrow">Mechanical Engineer · Bangalore</div>
     <h1 class="hero-name">Padmanabha<br><em>Pooja</em></h1>
-	<div class="hero-image">
-  <img src="images/profile.jpg" alt="Profile">
-	</div>
     <p class="hero-tagline">Manufacturing systems enthusiast currently building the future of automotive paint robotics at Toyota Kirloskar Motors.</p>
+
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Experience ↓</a>
       <a href="#contact" class="btn btn-outline">Get in Touch</a>
     </div>
   </div>
+
+  <!-- RIGHT SIDE IMAGE -->
+  <div class="hero-image">
+    <img src="images/profile.jpg" alt="Profile">
+  </div>
+
+</div>
   <div class="hero-meta">
     <span class="hero-meta-item">B.E. Mechanical</span>
     <div class="hero-meta-divider"></div>
