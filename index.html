@@ -835,6 +835,13 @@
     .projects-grid { grid-template-columns: 1fr; }
     .skills-layout { grid-template-columns: 1fr; }
     .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+	  .contact-links {
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+}
 
     h1.hero-name { font-size: 3rem; }
     h2.section-title { font-size: 2rem; }
@@ -862,7 +869,32 @@
   width: 300px;
   max-width: 100%;
 }
+/* FIX CONTACT OVERFLOW */
+.contact-link,
+.form-input,
+.form-textarea {
+  width: 100%;
+  max-width: 100%;
+}
 
+/* Prevent horizontal overflow */
+.contact-layout {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fix long text breaking */
+.contact-link div {
+  word-break: break-word;
+}
+
+/* Make sure padding doesn't increase width */
+.contact-link,
+.form-input,
+.form-textarea {
+  box-sizing: border-box;
+}
+	
 </style>
 </head>
 <body>
