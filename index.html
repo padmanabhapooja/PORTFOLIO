@@ -181,10 +181,12 @@
   }
 
   .hero-cta {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.9s ease 0.8s forwards;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers buttons */
+  justify-content: center;
+  gap: 1rem;
+}
   .btn {
     display: inline-flex; align-items: center; gap: 0.5rem;
     padding: 0.8rem 1.8rem;
@@ -235,13 +237,12 @@
   .hero-meta-divider { width: 1px; height: 48px; background: var(--border); }
 
   .scroll-indicator {
-    position: absolute;
-    bottom: 2.5rem; left: 50%;
-    transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-    opacity: 0;
-    animation: fadeIn 1s ease 1.5s forwards;
-  }
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;   /* VERY IMPORTANT */
+}
   .scroll-indicator span {
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
