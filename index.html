@@ -801,22 +801,19 @@
 }
 
 .hero-image {
-  position: relative;
-  top: auto;
-  right: auto;
-  transform: none;
+  order: 2;
   margin-top: 2rem;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* THIS centers it */
+  align-items: center;
 }
 
 .hero-image img {
-  width: 320px;
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 65%;
+  max-width: 220px;
+  margin: 0 auto;   /* EXTRA safety centering */
+  display: block;
 }
 	  
 .edu-layout {
