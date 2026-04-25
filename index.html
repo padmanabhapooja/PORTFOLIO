@@ -266,7 +266,7 @@
 .edu-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: start;
 }
 
@@ -594,6 +594,9 @@
     transform: translateX(-20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
+	.edu-item:last-child {
+  padding-bottom: 1rem;   /* reduces extra gap */
+}
   .edu-item.visible { opacity: 1; transform: translateX(0); }
   .edu-dot {
     position: absolute;
@@ -833,7 +836,7 @@
 }
 
 .edu-side-image {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
     section { padding: 5rem 1.5rem; }
